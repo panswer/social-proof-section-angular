@@ -1,0 +1,10 @@
+.icon-container {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-container[icon="star"] {
+  background-image: url("/assets/icons/icon-star.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

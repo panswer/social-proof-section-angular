@@ -1,0 +1,33 @@
+<div class="home-container">
+  <div class="section-1">
+    <app-title class="title-component">
+      {{ title }}
+    </app-title>
+
+    <app-paragraph class="paragraph-component">
+      {{ paragraph }}
+    </app-paragraph>
+  </div>
+
+  <div class="section-2">
+    <app-rate
+      *ngFor="let rate of rateList"
+      [stars]="rate.star"
+      [subTitle]="rate.subTitle"
+      [attr.style]="'--item-num:' + rate.num + ';'"
+      class="rate-component"
+    ></app-rate>
+  </div>
+
+  <div class="section-3">
+    <app-card-comment
+      *ngFor="let comment of commentList"
+      [avatar]="comment.avatar"
+      [comment]="comment.comment"
+      [name]="comment.name"
+      [status]="comment.status"
+      class="comment-component"
+      [attr.style]="'--item-num:' + comment.index + ';'"
+    ></app-card-comment>
+  </div>
+</div>

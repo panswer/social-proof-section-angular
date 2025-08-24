@@ -1,0 +1,23 @@
+.rate-container {
+  background-color: var(--color-neutral-light-grayish-magenta);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 430px;
+  gap: 15px;
+  box-sizing: border-box;
+
+  .star-container {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rate-container {
+    flex-direction: row;
+  }
+}

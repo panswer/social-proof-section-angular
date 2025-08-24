@@ -1,0 +1,84 @@
+.home-container {
+  display: grid;
+  font-size: var(--font-size);
+  padding-top: 75px;
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+
+    .title-component {
+      margin: 0 53px;
+    }
+
+    .paragraph-component {
+      margin: 0 20px;
+    }
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 25px;
+    padding: 0;
+    margin-top: 45px;
+  }
+
+  .section-3 {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 90px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-container {
+    grid-template-areas: "head rate" "comments comments";
+    padding-left: 160px;
+    padding-right: 160px;
+
+    .section-1 {
+      width: 420px;
+      text-align: left;
+      grid-area: head;
+
+      .title-component,
+      .paragraph-component {
+        margin: 0;
+      }
+
+      .title-component {
+        padding-right: 60px;
+        font-size: calc(var(--font-size) * 1.5);
+        line-height: normal;
+      }
+    }
+
+    .section-2 {
+      margin-right: 0;
+
+      .rate-component {
+        margin-left: calc(var(--font-size) * 3 * var(--item-num));
+        display: block;
+        grid-area: rate;
+      }
+    }
+
+    .section-3 {
+      flex-direction: row;
+      grid-area: comments;
+      justify-content: center;
+      gap: 30px;
+
+      .comment-component {
+        margin-top: calc(var(--font-size) * 2 * var(--item-num));
+      }
+    }
+  }
+}

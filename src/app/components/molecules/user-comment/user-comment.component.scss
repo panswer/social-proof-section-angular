@@ -1,0 +1,12 @@
+.user_comment-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+
+  .user_info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+}
