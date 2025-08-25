@@ -95,6 +95,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "social-proof-section-master-angular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "social-proof-section-master-angular:serve:production"
+            }
+          }
         }
       }
     }
